@@ -1,0 +1,5 @@
+Makefile
+__pycache__/
+/source/shs/*.otf
+/build/
+/out/
