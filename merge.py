@@ -47,6 +47,20 @@ def NameFont(param, font):
     elif slant == "Oblique":
         fsSelection["oblique"] = True
 
+    description = {
+        configure.LanguageId.enUS: configure.config.descriptionEn,
+        configure.LanguageId.enGB: configure.config.descriptionEn,
+        configure.LanguageId.ruRU: configure.config.descriptionRu,
+
+        configure.LanguageId.jaJP: configure.config.descriptionJa,
+        configure.LanguageId.koKR: configure.config.descriptionKo,
+        configure.LanguageId.zhCN: configure.config.descriptionLzh,
+        configure.LanguageId.zhHK: configure.config.descriptionLzh,
+        configure.LanguageId.zhMO: configure.config.descriptionLzh,
+        configure.LanguageId.zhSG: configure.config.descriptionLzh,
+        configure.LanguageId.zhTW: configure.config.descriptionLzh,
+    }
+
     font['name'] = [
         {
             "platformID": 3,
@@ -171,7 +185,13 @@ def NameFont(param, font):
             },
         ] for langId in configure.LanguageId],
         []
-    )
+    ) + [{
+        "platformID": 3,
+        "encodingID": 1,
+        "languageID": lang,
+        "nameID": 10,
+        "nameString": desc
+    } for lang, desc in description.items() ]
 
     if 'CFF_' in font:
         cff = font['CFF_']

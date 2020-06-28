@@ -16,6 +16,11 @@ class Config:
     descriptionEn = "Deutschland-Inspired Neo-grotesque"
     # literally “German idea of neo-grotesque”; shares the same acronym НИС as Немецкий институт по стандартизации (DIN)
     descriptionRu = "Немецкая Идея Статические гротески"
+    # Su’s edition, vertical iteration marks “〻” are converted to horizontal ones “々”
+    # see https://zh.wikisource.org/wiki/前赤壁賦
+    descriptionLzh = "浩々乎如憑虚御風　飄々乎如遺世獨立"
+    descriptionJa = "浩々乎として虚に馮り風に御して　飄々乎として世を遺れて独立し"
+    descriptionKo = "호호호여빙허어풍(浩浩乎如凴虛御風), 표표호여유세독립(飄飄乎如遺世獨立)"
     designer = "Cyano Hao (character set definition, PostScript outline of LCG & modification for World of Warcraft); Belleve Invis (Latin, Greek & Cyrillic); Ryoko NISHIZUKA 西塚涼子 (kana, bopomofo & ideographs); Sandoll Communications 산돌커뮤니케이션, Soo-young JANG 장수영 & Joo-yeon KANG 강주연 (hangul elements, letters & syllables); Dr. Ken Lunde (project architect, glyph set definition & overall production); Masataka HATTORI 服部正貴 (production & ideograph elements)"
     designerUrl = "https://github.com/CyanoHao"
     license = "This Font Software is licensed under the SIL Open Font License, Version 1.1. This Font Software is distributed on an \"AS IS\" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the SIL Open Font License for the specific language, permissions and limitations governing your use of this Font Software."
