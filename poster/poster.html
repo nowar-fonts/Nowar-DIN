@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>Nowar Sans Poster</title>
+
+	<!--
+		To build fonts:
+			make -jN \
+				build/nowar/unspec-NowarDIN{,Cursive}-CL-{Light,Regular,Medium,Bold}.otf \
+				build/nowar/unspec-NowarDIN-{CN,TW,JP}-{Regular,Bold}.otf
+	-->
+
+	<style>
+		@font-face {
+			font-family: "Nowar DIN CL";
+			font-weight: 300;
+			src: url("../build/nowar/unspec-NowarDIN-CL-Light.otf") format("opentype");
+		}
+		@font-face {
+			font-family: "Nowar DIN CL";
+			font-weight: normal;
+			src: url("../build/nowar/unspec-NowarDIN-CL-Regular.otf") format("opentype");
+		}
+		@font-face {
+			font-family: "Nowar DIN CL";
+			font-weight: 500;
+			src: url("../build/nowar/unspec-NowarDIN-CL-Medium.otf") format("opentype");
+		}
+		@font-face {
+			font-family: "Nowar DIN CL";
+			font-weight: bold;
+			src: url("../build/nowar/unspec-NowarDIN-CL-Bold.otf") format("opentype");
+		}
+		@font-face {
+			font-family: "Nowar DIN CN";
+			font-weight: normal;
+			src: url("../build/nowar/unspec-NowarDIN-CN-Regular.otf") format("opentype");
+		}
+		@font-face {
+			font-family: "Nowar DIN CN";
+			font-weight: bold;
+			src: url("../build/nowar/unspec-NowarDIN-CN-Bold.otf") format("opentype");
+		}
+		@font-face {
+			font-family: "Nowar DIN TW";
+			font-weight: normal;
+			src: url("../build/nowar/unspec-NowarDIN-TW-Regular.otf") format("opentype");
+		}
+		@font-face {
+			font-family: "Nowar DIN TW";
+			font-weight: bold;
+			src: url("../build/nowar/unspec-NowarDIN-TW-Bold.otf") format("opentype");
+		}
+		@font-face {
+			font-family: "Nowar DIN JP";
+			font-weight: normal;
+			src: url("../build/nowar/unspec-NowarDIN-JP-Regular.otf") format("opentype");
+		}
+		@font-face {
+			font-family: "Nowar DIN JP";
+			font-weight: bold;
+			src: url("../build/nowar/unspec-NowarDIN-JP-Bold.otf") format("opentype");
+		}
+
+		@font-face {
+			font-family: "Nowar DIN Cursive CL";
+			font-weight: 300;
+			src: url("../build/nowar/unspec-NowarDINCursive-CL-Light.otf") format("opentype");
+		}
+		@font-face {
+			font-family: "Nowar DIN Cursive CL";
+			font-weight: normal;
+			src: url("../build/nowar/unspec-NowarDINCursive-CL-Regular.otf") format("opentype");
+		}
+		@font-face {
+			font-family: "Nowar DIN Cursive CL";
+			font-weight: 500;
+			src: url("../build/nowar/unspec-NowarDINCursive-CL-Medium.otf") format("opentype");
+		}
+		@font-face {
+			font-family: "Nowar DIN Cursive CL";
+			font-weight: bold;
+			src: url("../build/nowar/unspec-NowarDINCursive-CL-Bold.otf") format("opentype");
+		}
+
+		body {
+			font-family: 'Nowar DIN CL', sans-serif;
+			font-size: 16px;
+			width: 1000px;
+		}
+		body .cursive {
+			font-family: 'Nowar DIN Cursive CL', sans-serif;
+		}
+		body :lang(zh-CN) {
+			font-family: 'Nowar DIN CN', sans-serif;
+		}
+		body :lang(zh-TW) {
+			font-family: 'Nowar DIN TW', sans-serif;
+		}
+		body :lang(ja) {
+			font-family: 'Nowar DIN JP', sans-serif;
+		}
+		body :lang(ko) {
+			font-family: 'Nowar DIN CL', sans-serif;
+		}
+
+		div.heading .h1 {
+			color: #333;
+			font-size: 4.8rem;
+			font-weight: bold;
+			text-align: center;
+		}
+		div.heading .h2 {
+			color: #333;
+			font-size: 3.2rem;
+			font-weight: bold;
+			text-align: center;
+			padding-top: 0.5em;
+		}
+
+		div.heading ul {
+			list-style: none;
+			margin: 0;
+			padding-left: 0;
+			display: flex;
+			flex-wrap: wrap;
+			justify-content: space-around;
+			align-content: space-around;
+		}
+		div.heading ul.localized-name-list li {
+			font-size: 4rem;
+			font-weight: bold;
+			background-color: #606060;
+			flex-grow: 1;
+			min-width: 400px;
+			height: 1.5em;
+			margin: 1px;
+			text-align: center;
+			color: #fff;
+		}
+		div.heading ul.localized-name-list .language-tag {
+			color: #bbb;
+		}
+		div.heading ul.weight-list li {
+			color: #666;
+			font-size: 3rem;
+			flex-grow: 1;
+			min-width: 200px;
+			height: 1em;
+			margin: 1px;
+			text-align: center;
+		}
+		div.heading ul.specimen-list li {
+			color: #000;
+			background-color: #ddd;
+			font-size: 1.5rem;
+			flex-grow: 1;
+			min-width: 200px;
+			min-height: 4em;
+			height: auto;
+			margin: 1px;
+			text-align: center;
+		}
+
+		div.heading span.vertical-box {
+			writing-mode: vertical-rl;
+			width: auto;
+			text-align: left;
+			height: 7em;
+			padding: 0.5em 0;
+		}
+
+		div.heading span.vcenter-box {
+			display: inline-table;
+			width: 100%;
+			height: 100%;
+		}
+		div.heading span.vcenter-box span.vcenter-wrap {
+			display: table-cell;
+			vertical-align: middle;
+		}
+	</style>
+</head>
+
+<body>
+	<div class="heading">
+		<div class="h1">Nowar DIN·<span class="cursive">Nowar DIN Cursive</span></div>
+		<ul class="localized-name-list">
+			<li><span class="vcenter-box"><span class="vcenter-wrap" lang="ru-RU">Новар НИС·<span class="cursive">Новар НИС Рукописный</span></span></span></li>
+			<li><span class="vcenter-box"><span class="vcenter-wrap" lang="zh-CN"><span class="language-tag">简</span> 有爱独逸</span></span></li>
+			<li><span class="vcenter-box"><span class="vcenter-wrap" lang="zh-TW"><span class="language-tag">繁</span> 有愛獨逸</span></span></li>
+			<li><span class="vcenter-box"><span class="vcenter-wrap" lang="ja"><span class="language-tag">日</span> 有愛独逸</span></span></li>
+			<li><span class="vcenter-box"><span class="vcenter-wrap" lang="ko"><span class="language-tag">韓</span> 애유독일</span></span></li>
+		</ul>
+		<div class="h2">Weights</div>
+		<ul class="weight-list">
+			<li><span class="vcenter-box"><span class="vcenter-wrap" style="font-weight: 300;">300 Light</span></span></li>
+			<li><span class="vcenter-box"><span class="vcenter-wrap" style="font-weight: 400;">400 Regular</span></span></li>
+			<li><span class="vcenter-box"><span class="vcenter-wrap" style="font-weight: 500;">500 Medium</span></span></li>
+			<li><span class="vcenter-box"><span class="vcenter-wrap" style="font-weight: 700;">700 Bold</span></span></li>
+		</ul>
+		<div class="h2">Specimen: Lore of the Name</div>
+		<ul class="specimen-list">
+			<li><span class="vcenter-box"><span class="vcenter-wrap">Deutsches Institut für Normung?<br><span class="cursive">Deutschland-Inspired Neo-grotesque!</span></span></li>
+			<li><span class="vcenter-box"><span class="vcenter-wrap" lang="ru-RU">Немецкий Институт по Стандартизации?<br><span class="cursive">Немецкая Идея Статические гротески!</span></span></span></li>
+		</ul><ul class="specimen-list" style="flex-flow: row-reverse;">
+			<li><span class="vertical-box" lang="lzh-CN">浩〻乎如憑虚御風，而不知其所止；飄〻乎如遺世獨立，羽化而登僊。</span></li>
+			<li><span class="vertical-box" lang="ja">浩々乎として虚に馮り風に御して、其の止まる所を知らずがごとく；飄々乎として世を遺れて独立し、羽化して登仙するがごとし。</span></li>
+			<li><span class="vertical-box" lang="ko">호호호、여빙허어풍，이부지기소지；표표호、여유세독립，우화이등선。</span></li>
+		</ul>
+	</div>
+</body>
+
+</html>
